@@ -1,22 +1,12 @@
-{% load staticfiles %}
+{% extends 'blog/base.html' %}
 
-<html>
-    <head>
-    	<title>경희대학교 청원 홈페이지</title>
-
-    	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
-		<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-        <div class="page-header">
-    <h1><a href="/">Kyung-Hee University</a></h1>
-		</div>
-
-		<div class="post">
-
-    <h1><a href="">후마니타스</a></h1>
-		</div>
-    </body>
-</html>
+{% block content %} 
+	{% for post in posts %}
+        <div>
+                
+             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+             <p>{{ post.text|linebreaksbr }}</p>
+             <p>published: {{ post.published_date }}</p>
+        </div>
+     {% endfor %}
+{% endblock %}
