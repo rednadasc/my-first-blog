@@ -8,14 +8,14 @@ body {
 }
 
 .page-header {
-    background-color: #a21e20;
+    background-color: #981e20;
     margin-top: 0;
-    padding: 20px 20px 20px 40px;
+    padding: 20px 20px 40px 60px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
     color: #ffffff;
-    font-size: 36pt;
+    font-size: 50pt;
     text-decoration: none;
 }
 
@@ -52,4 +52,47 @@ h1, h2, h3, h4 {
 
 .post h1 a, .post h1 a:visited {
     color: #000000;
+}
+
+<style>
+
+#nav_menu ul {
+list-style-type:none;
+
+ 
+
+/* 검은 배경색을 입히고, 보다 넓은 범위에 배경색을 넣기 위해 margin값을 약간 크게 잡아줌 */
+background-color:#000000;
+padding:1px 5px 5px 1px;
+
+ 
+
+float:right;
+}
+
+ 
+
+#nav_menu ul li {
+display:inline;
+border-left: 1px solid #c0c0c0;
+padding: 0px 10px 0px 10px;
+margin: 5px 0px 5px 0px;
+
+ 
+
+/*흰 글씨와 9포인트의 글자로 변경함 */
+color:#ffffff;
+font-size:9pt;
+}
+
+ 
+
+#nav_menu ul li:first-child {
+border-left: none;
+}
+
+</style>
+
+.comment {
+    margin: 20px 0px 20px 20px;
 }
